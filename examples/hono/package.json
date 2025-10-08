@@ -10,8 +10,8 @@
     "hono": "4.6.9"
   },
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "dev:streaming": "tsx watch src/hono-streaming.ts",
+    "dev": "node init && tsx watch src/server.ts",
+    "dev:streaming": "node init && tsx watch src/hono-streaming.ts",
     "curl": "curl -i -X POST http://localhost:8080",
     "type-check": "tsc --build"
   },

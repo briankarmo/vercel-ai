@@ -10,7 +10,7 @@
   },
   "scripts": {
     "type-check": "tsc --build",
-    "dev": "tsx src/server.ts"
+    "dev": "node init && tsx src/server.ts"
   },
   "devDependencies": {
     "@types/node": "20.17.24",
