@@ -3,8 +3,8 @@
   "version": "4.0.0-beta.29",
   "license": "Apache-2.0",
   "scripts": {
-    "build": "pnpm prepack",
-    "build:watch": "pnpm clean && pnpm --filter svelte build && svelte-package --input=src --watch",
+    "build": "node api.js && pnpm prepack",
+    "build:watch": "node api.js && pnpm clean && pnpm --filter svelte build && svelte-package --input=src --watch",
     "preview": "vite preview",
     "prepare": "echo ''",
     "prepack": "pnpm clean && svelte-package --input=src && publint",

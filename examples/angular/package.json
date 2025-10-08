@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently 'ng serve --proxy-config proxy.conf.json' 'tsx src/server.ts'",
-    "build:app": "ng build --conditions browser",
-    "build:server": "tsc -p tsconfig.server.json",
-    "build": "pnpm run build:app && pnpm run build:server",
+    "start": "node api.js && concurrently 'ng serve --proxy-config proxy.conf.json' 'tsx src/server.ts'",
+    "build:app": "node api.js && ng build --conditions browser",
+    "build:server": "node api.js && tsc -p tsconfig.server.json",
+    "build": "node api.js && pnpm run build:app && pnpm run build:server",
     "watch": "ng build --watch --configuration development",
     "clean": "rm -rf dist *.tsbuildinfo"
   },

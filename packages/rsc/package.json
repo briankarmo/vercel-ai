@@ -7,8 +7,8 @@
   "module": "./dist/rsc-client.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup --tsconfig tsconfig.build.json",
-    "build:watch": "pnpm build --watch",
+    "build": "node api.js && tsup --tsconfig tsconfig.build.json",
+    "build:watch": "node api.js && pnpm build --watch",
     "clean": "rm -rf dist",
     "lint": "eslint \"./**/*.ts*\"",
     "type-check": "tsc --noEmit",
